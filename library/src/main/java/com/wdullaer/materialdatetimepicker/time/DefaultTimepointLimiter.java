@@ -24,7 +24,7 @@ public class DefaultTimepointLimiter implements TimepointLimiter {
     private Timepoint mMinTime;
     private Timepoint mMaxTime;
 
-    DefaultTimepointLimiter() {}
+    public DefaultTimepointLimiter() {}
 
     @SuppressWarnings("WeakerAccess")
     public DefaultTimepointLimiter(Parcel in) {
