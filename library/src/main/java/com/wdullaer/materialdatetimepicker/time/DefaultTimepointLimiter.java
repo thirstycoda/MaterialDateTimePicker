@@ -17,7 +17,7 @@ import static com.wdullaer.materialdatetimepicker.time.TimePickerDialog.MINUTE_I
  * Created by wdullaer on 20/06/17.
  */
 
-class DefaultTimepointLimiter implements TimepointLimiter {
+public class DefaultTimepointLimiter implements TimepointLimiter {
     private TreeSet<Timepoint> mSelectableTimes = new TreeSet<>();
     private TreeSet<Timepoint> mDisabledTimes = new TreeSet<>();
     private TreeSet<Timepoint> exclusiveSelectableTimes = new TreeSet<>();
