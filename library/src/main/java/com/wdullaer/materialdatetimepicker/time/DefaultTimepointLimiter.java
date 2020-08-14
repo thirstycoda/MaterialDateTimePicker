@@ -60,24 +60,24 @@ public class DefaultTimepointLimiter implements TimepointLimiter {
         }
     };
 
-    void setMinTime(@NonNull Timepoint minTime) {
+    public void setMinTime(@NonNull Timepoint minTime) {
         if(mMaxTime != null && minTime.compareTo(mMaxTime) > 0)
             throw new IllegalArgumentException("Minimum time must be smaller than the maximum time");
         mMinTime = minTime;
     }
 
-    void setMaxTime(@NonNull Timepoint maxTime) {
+    public void setMaxTime(@NonNull Timepoint maxTime) {
         if(mMinTime != null && maxTime.compareTo(mMinTime) < 0)
             throw new IllegalArgumentException("Maximum time must be greater than the minimum time");
         mMaxTime = maxTime;
     }
 
-    void setSelectableTimes(@NonNull Timepoint[] selectableTimes) {
+    public void setSelectableTimes(@NonNull Timepoint[] selectableTimes) {
         mSelectableTimes.addAll(Arrays.asList(selectableTimes));
         exclusiveSelectableTimes = getExclusiveSelectableTimes(mSelectableTimes, mDisabledTimes);
     }
 
-    void setDisabledTimes(@NonNull Timepoint[] disabledTimes) {
+    public void setDisabledTimes(@NonNull Timepoint[] disabledTimes) {
         mDisabledTimes.addAll(Arrays.asList(disabledTimes));
         exclusiveSelectableTimes = getExclusiveSelectableTimes(mSelectableTimes, mDisabledTimes);
     }
