@@ -109,8 +109,8 @@ public class AmPmCirclesView extends View {
         mAmPmCircleRadiusMultiplier =
                 Float.parseFloat(res.getString(R.string.mdtp_ampm_circle_radius_multiplier));
         String[] amPmTexts = new DateFormatSymbols(locale).getAmPmStrings();
-        mAmText = amPmTexts[0];
-        mPmText = amPmTexts[1];
+        mAmText = amPmTexts[0].toUpperCase();
+        mPmText = amPmTexts[1].toUpperCase();
 
         mAmDisabled = controller.isAmDisabled();
         mPmDisabled = controller.isPmDisabled();
